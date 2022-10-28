@@ -8,7 +8,6 @@ function App() {
   return (
     <Container>
       <CssBaseline />
-      <Header />
       <RouterProvider router={router} />
     </Container>
   )
