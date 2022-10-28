@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -29,49 +29,34 @@ namespace Hakaton_bot
         {
             var message = update.Message;
 
-
             if (message.Text != null)
             {
-                if (message.Text == "/start")
+                switch (message.Text)
                 {
+                case "/start":
                     await Botclient.SendTextMessageAsync(message.Chat.Id, Hellow_Text, replyMarkup: GetButtons());
                     return;
-                }
-
-                if (message.Text == "/help")
-                {
+                case "/help":
                     await Botclient.SendTextMessageAsync(message.Chat.Id, "Comands");
                     return;
-                }
-                if (message.Text == Text1 ) 
-                {
+                case Text1:
                     await Botclient.SendTextMessageAsync(message.Chat.Id, Text4, replyMarkup: CheckRegistration());
                     return;
-                }
-                if (message.Text == Text2)
-                {
+                case Text2:
                     //RemoveButtons();
                     await Botclient.SendTextMessageAsync(message.Chat.Id, Text6);
                     return;
-                }
-                if (message.Text == Text3)
-                {
-                    
+                case Text3:
                     return;
-                }
-                if (message.Text == Text5)
-                {
-                    
+                case Text5:
                     await Botclient.SendTextMessageAsync(message.Chat.Id, Text6);
                     return;
-                }
-                {
-                    //RemoveButtons();
+                default://RemoveButtons();
                     await Botclient.SendTextMessageAsync(message.Chat.Id, "Ok", replyMarkup: RemoveButtons());
                     return;
                 }
-                
             }
+
         }
         private static Task Error(ITelegramBotClient client, Exception exception, CancellationToken token)
         {
@@ -119,3 +104,4 @@ namespace Hakaton_bot
         
     }
 }
+
