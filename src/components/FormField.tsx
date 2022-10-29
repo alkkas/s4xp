@@ -51,7 +51,7 @@ const FormField = (props: FieldAttributes<any>) => {
           }
         />
         <FormHelperText id={field.name} error={!!(meta.error && meta.touched)}>
-          {meta.error}
+          {meta.touched && meta.error}
         </FormHelperText>
       </FormControl>
     </>

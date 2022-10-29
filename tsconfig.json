@@ -20,8 +20,10 @@
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "utils/*": ["utils/*"],
-      "store/*": ["store/*"]
+      "store/*": ["store/*"],
+      "types/*": ["types/*"],
+      "assets/*": ["assets/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "index.d.ts"]
 }

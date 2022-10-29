@@ -10,21 +10,13 @@ import {
 } from '@mui/material'
 import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
+import ButtonWhite from 'components/ButtonWhite'
+import logo from 'assets/img/logo.png'
 
 const StyledLink = styled(Link)(() => ({
   color: 'unset',
   textDecoration: 'unset',
   borderRadius: 0,
-}))
-
-const HeaderButton = styled(Button)<ButtonProps>(() => ({
-  color: '#fff',
-  borderColor: '#fff',
-
-  '&:hover': {
-    borderColor: '#b0bec5',
-    color: '#b0bec5',
-  },
 }))
 
 export default function Header() {
@@ -37,14 +29,14 @@ export default function Header() {
     >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <StyledLink to="/">
-          <Typography>LOGO</Typography>
+          <img src={logo} alt="логотип" width="64" />
         </StyledLink>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <StyledLink to="login">
-            <HeaderButton variant="outlined">Войти</HeaderButton>
+            <ButtonWhite variant="outlined">Войти</ButtonWhite>
           </StyledLink>
           <StyledLink to="register">
-            <HeaderButton variant="outlined">Регистрация</HeaderButton>
+            <ButtonWhite variant="outlined">Регистрация</ButtonWhite>
           </StyledLink>
         </Box>
       </Toolbar>
