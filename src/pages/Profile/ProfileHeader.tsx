@@ -23,13 +23,16 @@ export default function ProfileHeader() {
           src="img"
           sx={{ width: 70, height: 70, mr: 2 }}
         />
-        <Typography variant="h6">Имя Фамилия</Typography>
+        <Typography variant="h6">Иванов Иван</Typography>
         <Chip label="ученик" />
       </Stack>
-      <Stack direction="row" spacing={1} alignItems="center">
+      <Typography>
+        ID курса: <strong>1149949</strong>
+      </Typography>
+      {/* <Stack direction="row" spacing={1} alignItems="center">
         <TextField size="small" variant="outlined" label="id курса" />
         <Button variant="contained">Записаться</Button>
-      </Stack>
+      </Stack> */}
     </Stack>
   )
 }

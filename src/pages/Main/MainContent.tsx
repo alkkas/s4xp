@@ -6,13 +6,13 @@ export default function MainContent() {
   return (
     <BoxCenter>
       <Typography variant="h1" sx={{ mb: 1 }}>
-        Заголовок ребята!
+        S4xp
       </Typography>
-      <Typography variant="subtitle1" sx={{ mb: 4 }}>
-        Здесь надо будет потом написать что-то об проекте
-      </Typography>
+      {/* <Typography variant="subtitle1" sx={{ mb: 4 }}>
+        
+      </Typography> */}
       <Button variant="contained" size="large">
-        кнопка
+        Вперед
       </Button>
     </BoxCenter>
   )
